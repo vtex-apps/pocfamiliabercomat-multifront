@@ -1,0 +1,7 @@
+{
+  "stack": "nodejs",
+  "memory": 256,
+  "minReplicas": 3,
+  "workers": 1,
+  "ttl": 60
+}
