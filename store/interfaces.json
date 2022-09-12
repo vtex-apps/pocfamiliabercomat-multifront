@@ -1,0 +1,22 @@
+{
+  "multisite": {
+    "component": "Multisite",
+    "content": {
+      "$ref": "#/definitions/Multisite"
+    }
+  },
+  "conditionalSegmentBlock": {
+    "component": "ConditionalSegmentBlock",
+    "composition": "children",
+    "content": {
+      "$ref": "#/definitions/ConditionalSegmentBlock"
+    }
+  },
+  "conditionalFrontBlock": {
+    "component": "ConditionalFrontBlock",
+    "composition": "children",
+    "content": {
+      "$ref": "#/definitions/ConditionalFrontBlock"
+    }
+  }
+}

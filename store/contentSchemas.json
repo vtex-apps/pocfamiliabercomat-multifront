@@ -1,0 +1,106 @@
+{
+    "definitions": {
+        "Multisite": {
+            "type": "object",
+            "properties": {
+                "src1": {
+                    "title": "admin/editor.image.src.title",
+                    "$ref": "app:vtex.native-types#/definitions/url",
+                    "default": "",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                },
+                "alt1": {
+                    "title": "admin/editor.image.alt.title",
+                    "$ref": "app:vtex.native-types#/definitions/text",
+                    "default": ""
+                },
+                "title1": {
+                    "title": "admin/editor.image.title.title",
+                    "description": "admin/editor.image.title.description",
+                    "$ref": "app:vtex.native-types#/definitions/text",
+                    "default": ""
+                },
+                "idValue1": {
+                    "title": "editor.multisite.navigation.value1",
+                    "type": "number",
+                    "default": null
+                },
+                "src2": {
+                    "title": "admin/editor.image.src.title",
+                    "$ref": "app:vtex.native-types#/definitions/url",
+                    "default": "",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                },
+                "alt2": {
+                    "title": "admin/editor.image.alt.title",
+                    "$ref": "app:vtex.native-types#/definitions/text",
+                    "default": ""
+                },
+                "title2": {
+                    "title": "admin/editor.image.title.title",
+                    "description": "admin/editor.image.title.description",
+                    "$ref": "app:vtex.native-types#/definitions/text",
+                    "default": ""
+                },
+                "idValue2": {
+                    "title": "editor.multisite.navigation.value2",
+                    "type": "number",
+                    "default": null
+                },
+                "src3": {
+                    "title": "admin/editor.image.src.title",
+                    "$ref": "app:vtex.native-types#/definitions/url",
+                    "default": "",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                },
+                "alt3": {
+                    "title": "admin/editor.image.alt.title",
+                    "$ref": "app:vtex.native-types#/definitions/text",
+                    "default": ""
+                },
+                "title3": {
+                    "title": "admin/editor.image.title.title",
+                    "description": "admin/editor.image.title.description",
+                    "$ref": "app:vtex.native-types#/definitions/text",
+                    "default": ""
+                },
+                "idValue3": {
+                    "title": "editor.multisite.navigation.value3",
+                    "type": "number",
+                    "default": null
+                }
+            }   
+        },
+        "ConditionalSegmentBlock": {
+            "type": "object",
+            "properties": {
+                "segmentValue": {
+                    "title": "segmentValue",
+                    "type": "number",
+                    "default": null
+                },
+                "isDefault": {
+                    "title": "isDefault",
+                    "type": "boolean",
+                    "default": false
+                }
+            }   
+        },
+        "ConditionalFrontBlock": {
+            "type": "object",
+            "properties": {
+                "frontValue": {
+                    "title": "frontValue",
+                    "type": "number",
+                    "default": null
+                }
+            }   
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "editor.multisite.title"                     : "Multisite",
+  "editor.multisite.description"               : "Multisite component",
+  "editor.multisite.navigation.name1"          : "First navigation name",
+  "editor.multisite.navigation.default"        : "Name",
+  "editor.multisite.navigation.value1"         : "First parameter ID",
+  "editor.multisite.navigation.name2"          : "Second navigation name",
+  "editor.multisite.navigation.value2"         : "Second parameter ID",
+  "editor.multisite.navigation.name3"          : "Third navigation name",
+  "editor.multisite.navigation.value3"         : "Third parameter ID",
+  "editor.image.src.title"                     : "Src",
+  "editor.image.alt.title"                     : "Alt",
+  "editor.image.title.title"                   : "Title"
+}
