@@ -1,0 +1,30 @@
+.navigationLink {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: rgba(150, 150, 150, 0.322);
+    text-decoration: none;
+    margin-right: .5rem;
+    padding: .5rem 1.5rem;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigationLink:hover {
+    border: 1px solid rgba(150, 150, 150, 0.322);
+    cursor: pointer;
+    transition: .3s all ease-in;
+}
+
+.active {
+    border: 1px solid rgba(150, 150, 150, 0.322);
+    color: rgba(44, 44, 44, 0.322);
+    transition: .3s all ease-in;
+}
+
+.navigationLink img {
+    width: 100%;
+    height: auto;
+}
