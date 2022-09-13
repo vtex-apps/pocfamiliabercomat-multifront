@@ -1,73 +1,66 @@
-import type { FC } from "react";
+import { FC } from "react";
 import React from "react";
-// import { useRuntime } from "vtex.render-runtime";
-import type { Runtime } from './typings/global';
-//import atob from 'atob';
 
 type Props = {
   frontValue: number;
 };
 
-declare let window: {
-  __RUNTIME__: Runtime
-};
+const GetPostalCode = async() => {
+
+  fetch('/api/sessions?items=public.postalCode', {
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      }
+  })
+  .then(response => response.json())
+  .then(response => {
+
+    let postalCode = response.namespaces.public.postalCode.value;
+    localStorage.setItem("CP", postalCode);
+
+  })
+  .catch(err => console.error(err));
+}
 
 const ConditionalFrontBlock: FC<Props> = ({
   frontValue,
   children
 }) => {
-  //obtener de la cookie vtex_segment
-  //const segmentToken = window?.__RUNTIME__?.segmentToken;
-  let localStorageCode = 3000;
-  // let localStorageCode = 1425;
-  // let localStorageCode = 1425;
+  GetPostalCode();
+
+  // obtenemos el código postal guardado en el local storage
+  const localStorage = window?.localStorage?.getItem("CP") || "";
+  const postalCode = parseInt(localStorage);
+  console.log('postalCode', postalCode);
+
   let conditionalFront = <></>;
-  let condition = frontValue;
 
-  const id1 = 1;
-  const id2 = 2;
-  const id3 = 3;
+  if (postalCode < 2000) {
 
-  // const condition = frontValue;
-
-  if (localStorageCode < 2000) {
-    condition = id1;
+    const id1 = 1;
+    let condition = frontValue == id1;
     return conditionalFront = <>{condition && children}</>;
-  } else if (localStorageCode > 2000 && localStorageCode < 5000) {
-    condition = id2;
+
+  } else if (postalCode > 2000 && postalCode < 5000) {
+
+    const id2 = 2;
+    let condition = frontValue == id2;
     return conditionalFront = <>{condition && children}</>;
+
+  } else if (postalCode > 5000) {
+
+    const id3 = 3;
+    let condition = frontValue == id3;
+    return conditionalFront = <>{condition && children}</>;
+
   } else {
-    condition = id3;
-    return conditionalFront = <>{condition && children}</>;
-  }
 
-  /*
-  if (frontValue === 1) {
-    return conditionalFront = <>{condition && children}</>;
-  }
-  return conditionalFront;
-  */
-
-
-
-
-  /*
-  if (segmentToken) {
-    const segmentTokenInfo = JSON.parse(atob(segmentToken));
-    
-    if (segmentTokenInfo && segmentTokenInfo.facets) {
-      let segmentFacet = (segmentTokenInfo.facets).split("=");
-      let facetParameter = segmentFacet[0];
-      let facetParameterId = segmentFacet[1].split(";")[0];  
-      const condition = segmentValue == facetParameterId;
-
-      if (segmentParameter === facetParameter) {
-        selectedSegment = <>{condition && children}</>;
-      }
-    }
+    return conditionalFront;
 
   }
-  */
 };
 
 export default ConditionalFrontBlock;
+
