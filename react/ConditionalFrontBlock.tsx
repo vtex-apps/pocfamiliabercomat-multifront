@@ -1,58 +1,32 @@
 import { FC } from "react";
 import React from "react";
 
-type Props = {
-  frontValue: number;
-};
-
-const GetPostalCode = async() => {
-
-  fetch('/api/sessions?items=public.postalCode', {
-      method: 'GET',
-      headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-      }
-  })
-  .then(response => response.json())
-  .then(response => {
-
-    let postalCode = response.namespaces.public.postalCode.value;
-    localStorage.setItem("CP", postalCode);
-
-  })
-  .catch(err => console.error(err));
-}
-
-const ConditionalFrontBlock: FC<Props> = ({
+const ConditionalFrontBlock: FC<any> = ({
   frontValue,
   children
 }) => {
-  GetPostalCode();
 
   // obtenemos el código postal guardado en el local storage
-  const localStorage = window?.localStorage?.getItem("CP") || "";
-  const postalCode = parseInt(localStorage);
+  const storageCp = window?.localStorage?.getItem("CP") || "";
+  const postalCode = parseInt(storageCp);
+
   console.log('postalCode', postalCode);
 
-  let conditionalFront = <></>;
+  // let conditionalFront = <></>;
+  let id = 1; //aca valor default
+  let condition = frontValue == id;
+  let conditionalFront = <>{condition && children}</>;
 
-  if (postalCode < 2000) {
+  if (postalCode > 3500 && postalCode < 3790) {
 
-    const id1 = 1;
-    let condition = frontValue == id1;
+    id = 2;
+    let condition = frontValue == id;
     return conditionalFront = <>{condition && children}</>;
 
-  } else if (postalCode > 2000 && postalCode < 5000) {
+  } else if (postalCode > 4000 && postalCode < 4242) {
 
-    const id2 = 2;
-    let condition = frontValue == id2;
-    return conditionalFront = <>{condition && children}</>;
-
-  } else if (postalCode > 5000) {
-
-    const id3 = 3;
-    let condition = frontValue == id3;
+    id = 3;
+    let condition = frontValue == id;
     return conditionalFront = <>{condition && children}</>;
 
   } else {
