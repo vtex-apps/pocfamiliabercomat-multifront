@@ -3,6 +3,100 @@
 
 ---
 
-# Multisite Segment Results
+## pocfamiliabercomat multifront
 
-To use the `multisite-segment-results`, you'll need to install the `vtex.search-segment-graphql@0.x` from this  [**github**](https://github.com/vtex-apps/search-segment-graphql) on your store.
+# Regionalization scripts
+
+# (postalCode < 3500)
+
+function regionalization () {
+
+let postalCode = 3434;
+
+const dataPOST = JSON.stringify({
+    public: {
+        country: {
+        value: "ARG",
+        },
+        postalCode:{
+            value: postalCode + ""
+        },
+    },
+    });
+    const xhrPOST = new XMLHttpRequest();
+    xhrPOST.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+        console.log(this.responseText);
+        localStorage.setItem('CP', postalCode + "");
+    	window.location.reload();
+    }
+    });
+    xhrPOST.open("POST", "/api/sessions");
+    xhrPOST.setRequestHeader("content-type", "application/json");
+    xhrPOST.send(dataPOST);
+}
+
+regionalization();
+
+
+# (postalCode > 3500 && postalCode < 3790)
+
+function regionalization () {
+
+let postalCode = 3636;
+
+const dataPOST = JSON.stringify({
+    public: {
+        country: {
+        value: "ARG",
+        },
+        postalCode:{
+            value: postalCode + ""
+        },
+    },
+    });
+    const xhrPOST = new XMLHttpRequest();
+    xhrPOST.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+        console.log(this.responseText);
+        localStorage.setItem('CP', postalCode + "");
+    	window.location.reload();
+    }
+    });
+    xhrPOST.open("POST", "/api/sessions");
+    xhrPOST.setRequestHeader("content-type", "application/json");
+    xhrPOST.send(dataPOST);
+}
+
+regionalization();
+
+# (postalCode > 4000 && postalCode < 4242)
+
+function regionalization () {
+
+let postalCode = 4141;
+
+const dataPOST = JSON.stringify({
+    public: {
+        country: {
+        value: "ARG",
+        },
+        postalCode:{
+            value: postalCode + ""
+        },
+    },
+    });
+    const xhrPOST = new XMLHttpRequest();
+    xhrPOST.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+        console.log(this.responseText);
+        localStorage.setItem('CP', postalCode + "");
+    	window.location.reload();
+    }
+    });
+    xhrPOST.open("POST", "/api/sessions");
+    xhrPOST.setRequestHeader("content-type", "application/json");
+    xhrPOST.send(dataPOST);
+}
+
+regionalization();
