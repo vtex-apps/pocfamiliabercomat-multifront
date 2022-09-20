@@ -3,11 +3,11 @@
 
 ---
 
-## pocfamiliabercomat multifront
+# pocfamiliabercomat multifront
 
-# Regionalization scripts
+## Regionalization scripts
 
-# (postalCode < 3500)
+## (postalCode < 3500)
 
 function regionalization () {
 
@@ -39,7 +39,7 @@ const dataPOST = JSON.stringify({
 regionalization();
 
 
-# (postalCode > 3500 && postalCode < 3790)
+## (postalCode > 3500 && postalCode < 3790)
 
 function regionalization () {
 
@@ -70,7 +70,7 @@ const dataPOST = JSON.stringify({
 
 regionalization();
 
-# (postalCode > 4000 && postalCode < 4242)
+## (postalCode > 4000 && postalCode < 4242)
 
 function regionalization () {
 
