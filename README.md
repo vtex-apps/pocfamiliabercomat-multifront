@@ -7,8 +7,9 @@
 
 ## Regionalization scripts
 
-## (postalCode < 3500)
+#### (postalCode < 3500)
 
+```javascript
 function regionalization () {
 
 let postalCode = 3434;
@@ -37,10 +38,11 @@ const dataPOST = JSON.stringify({
 }
 
 regionalization();
+```
 
+#### (postalCode > 3500 && postalCode < 3790)
 
-## (postalCode > 3500 && postalCode < 3790)
-
+```javascript
 function regionalization () {
 
 let postalCode = 3636;
@@ -69,9 +71,11 @@ const dataPOST = JSON.stringify({
 }
 
 regionalization();
+```
 
-## (postalCode > 4000 && postalCode < 4242)
+#### (postalCode > 4000 && postalCode < 4242)
 
+```javascript
 function regionalization () {
 
 let postalCode = 4141;
@@ -100,3 +104,4 @@ const dataPOST = JSON.stringify({
 }
 
 regionalization();
+```
