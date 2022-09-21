@@ -12,25 +12,25 @@
 ```javascript
 function regionalization () {
 
-let postalCode = 3434;
+    let postalCode = 3434;
 
-const dataPOST = JSON.stringify({
-    public: {
-        country: {
-            value: "ARG",
+    const dataPOST = JSON.stringify({
+        public: {
+            country: {
+                value: "ARG",
+            },
+            postalCode:{
+                value: postalCode + ""
+            },
         },
-        postalCode:{
-            value: postalCode + ""
-        },
-    },
     });
     const xhrPOST = new XMLHttpRequest();
     xhrPOST.addEventListener("readystatechange", function () {
-    if (this.readyState === this.DONE) {
-        console.log(this.responseText);
-        localStorage.setItem('CP', postalCode + "");
-    	window.location.reload();
-    }
+        if (this.readyState === this.DONE) {
+            console.log(this.responseText);
+            localStorage.setItem('CP', postalCode + "");
+            window.location.reload();
+        }
     });
     xhrPOST.open("POST", "/api/sessions");
     xhrPOST.setRequestHeader("content-type", "application/json");
@@ -45,25 +45,25 @@ regionalization();
 ```javascript
 function regionalization () {
 
-let postalCode = 3636;
+    let postalCode = 3636;
 
-const dataPOST = JSON.stringify({
-    public: {
-        country: {
-            value: "ARG",
+    const dataPOST = JSON.stringify({
+        public: {
+            country: {
+                value: "ARG",
+            },
+            postalCode:{
+                value: postalCode + ""
+            },
         },
-        postalCode:{
-            value: postalCode + ""
-        },
-    },
     });
     const xhrPOST = new XMLHttpRequest();
     xhrPOST.addEventListener("readystatechange", function () {
-    if (this.readyState === this.DONE) {
-        console.log(this.responseText);
-        localStorage.setItem('CP', postalCode + "");
-    	window.location.reload();
-    }
+        if (this.readyState === this.DONE) {
+            console.log(this.responseText);
+            localStorage.setItem('CP', postalCode + "");
+            window.location.reload();
+        }
     });
     xhrPOST.open("POST", "/api/sessions");
     xhrPOST.setRequestHeader("content-type", "application/json");
@@ -78,25 +78,25 @@ regionalization();
 ```javascript
 function regionalization () {
 
-let postalCode = 4141;
+    let postalCode = 4141;
 
-const dataPOST = JSON.stringify({
-    public: {
-        country: {
-            value: "ARG",
+    const dataPOST = JSON.stringify({
+        public: {
+            country: {
+                value: "ARG",
+            },
+            postalCode:{
+                value: postalCode + ""
+            },
         },
-        postalCode:{
-            value: postalCode + ""
-        },
-    },
     });
     const xhrPOST = new XMLHttpRequest();
     xhrPOST.addEventListener("readystatechange", function () {
-    if (this.readyState === this.DONE) {
-        console.log(this.responseText);
-        localStorage.setItem('CP', postalCode + "");
-    	window.location.reload();
-    }
+        if (this.readyState === this.DONE) {
+            console.log(this.responseText);
+            localStorage.setItem('CP', postalCode + "");
+            window.location.reload();
+        }
     });
     xhrPOST.open("POST", "/api/sessions");
     xhrPOST.setRequestHeader("content-type", "application/json");
