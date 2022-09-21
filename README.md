@@ -17,7 +17,7 @@ let postalCode = 3434;
 const dataPOST = JSON.stringify({
     public: {
         country: {
-        value: "ARG",
+            value: "ARG",
         },
         postalCode:{
             value: postalCode + ""
@@ -50,7 +50,7 @@ let postalCode = 3636;
 const dataPOST = JSON.stringify({
     public: {
         country: {
-        value: "ARG",
+            value: "ARG",
         },
         postalCode:{
             value: postalCode + ""
@@ -83,7 +83,7 @@ let postalCode = 4141;
 const dataPOST = JSON.stringify({
     public: {
         country: {
-        value: "ARG",
+            value: "ARG",
         },
         postalCode:{
             value: postalCode + ""
